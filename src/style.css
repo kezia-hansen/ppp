@@ -1,0 +1,20 @@
+/* Hentning af Fonte */
+@font-face {
+    font-family: 'cherry_bomb_oneregular';
+    src: url('cherrybombone-regular-webfont.woff2') format('woff2'),
+        url('cherrybombone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'cherry_bomb_oneregular';
+    color: aqua;
+}
