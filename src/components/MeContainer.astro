@@ -1,0 +1,65 @@
+---
+
+---
+
+<section>
+  <img src="../img/kh.png" alt="Cartoon billede af Kezia" />
+  <div>
+    <h1>I am a Frontend developer</h1>
+    <p>Creative design and coding in harmony</p>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding-top: 80px;
+  }
+  section img {
+    width: 172px;
+    height: auto;
+  }
+
+  div {
+    padding-right: 30px;
+    margin-left: 30px;
+    text-align: center;
+  }
+
+  div h1 {
+    color: #9c2e0e;
+    font-size: 40px;
+  }
+
+  div p {
+    color: #6e2200;
+    font-size: 20px;
+  }
+
+  /* Wide Screen */
+
+  @media (min-width: 48em) {
+    section {
+      flex-direction: column;
+    }
+    section img {
+      width: 333px;
+      height: auto;
+    }
+
+    div {
+      padding-right: 30px;
+      margin-left: 30px;
+    }
+
+    div h1 {
+      color: #9c2e0e;
+    }
+
+    div p {
+      color: #6e2200;
+    }
+  }
+</style>
