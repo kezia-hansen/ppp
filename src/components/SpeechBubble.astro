@@ -1,0 +1,95 @@
+---
+
+---
+
+<div class="container">
+  <div class="speech-bubble">
+    <p>Hey, Let’s Talk! <br /> <br /> If you'd like to connect on <a href="www.linkedin.com/in/keziahansen">LinkedIn</a> or hit me up by <a href="mailto: kezia.hansen02@gmail.com">Email</a>.</p>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-right: -70%;
+    margin-left: 10%;
+  }
+
+  .speech-bubble {
+    position: relative;
+    background: #9c2e0e;
+    padding: 24px;
+    border-radius: 1.5em;
+  }
+
+  .speech-bubble:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #9c2e0e;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+  }
+
+  div p {
+    color: #fee1bb;
+    font-size: 1.5rem;
+  }
+
+  div a {
+    color: #fda45f;
+    text-decoration: none;
+  }
+  div a:hover {
+    color: #fda45f;
+  }
+
+  @media (min-width: 48em) {
+    .container {
+      display: flex;
+      justify-content: center;
+      margin-right: auto;
+      margin-left: 30%;
+      width: 40%;
+      margin-top: 6%;
+    }
+
+    .speech-bubble {
+      position: relative;
+      background: #9c2e0e;
+      padding: 24px;
+      border-radius: 1.5em;
+    }
+
+    .speech-bubble:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-top-color: #9c2e0e;
+      border-bottom: 0;
+      border-left: 0;
+      margin-left: -10px;
+      margin-bottom: -20px;
+    }
+
+    div p {
+      color: #fee1bb;
+      font-size: 2rem;
+    }
+
+    div a:hover {
+      color: #cc5819;
+    }
+  }
+</style>
