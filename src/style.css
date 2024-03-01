@@ -17,3 +17,7 @@ html {
     font-family: 'cherry_bomb_oneregular';
     background: #FEE1BB;
 }
+
+body {
+    margin: 0 auto;
+}

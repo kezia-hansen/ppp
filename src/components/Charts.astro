@@ -1,0 +1,80 @@
+<section class="container">
+  <div class="item" style="margin-right: 12rem;">
+    <div class="h2-container">
+      <h2>Kompetancer</h2>
+      <div class="rule"></div>
+    </div>
+    <img src="../img/radarchart.svg" alt="Chart over kompetancer" />
+  </div>
+
+  <div class="item">
+    <div class="h2-container">
+      <h2>Skills</h2>
+      <div class="rule"></div>
+    </div>
+    <img src="../img/dotchart.svg" alt="Chart over skills" />
+  </div>
+</section>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: 30%;
+    width: 100%;
+    margin-top: 6%;
+  }
+
+  .item {
+    text-align: left;
+    color: #cc5819;
+  }
+
+  .h2-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .h2-container .rule {
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin: 0 0 20px 10px;
+    background-color: #cc5819;
+  }
+
+  .item img {
+    margin-left: 10px;
+  }
+
+  @media (min-width: 48em) {
+    .container {
+      flex-direction: row;
+      margin-left: 4%;
+    }
+
+    .item {
+      text-align: left;
+      color: #cc5819;
+    }
+
+    .h2-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .h2-container .rule {
+      display: block;
+      width: 67%;
+      height: 3px;
+      margin: 0 0 20px 20px;
+      background-color: #cc5819;
+    }
+
+    .item img {
+      margin-left: 20px;
+    }
+  }
+</style>
