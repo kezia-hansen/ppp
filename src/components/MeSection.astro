@@ -7,9 +7,12 @@ import "../style.css";
     <img src="../img/kh.png" alt="Cartoon picture of Kezia" />
   </div>
   <div class="section__text">
-    <p class="section__text__p1">Hello, i'm</p>
+    <p class="section__text__p1">Hello, i am</p>
     <h1 class="title">Kezia Hansen</h1>
-    <p class="section__text__p2">Frontend Developer</p>
+    <div class="flex">
+      <p class="section__text__p2" id="word"></p>
+      <p class="section__text__p2 blink">|</p>
+    </div>
     <p class="section__text__p3">- Creative design and coding in harmony</p>
     <div class="bubble-container">
       <div class="speech left">
@@ -30,6 +33,10 @@ import "../style.css";
     height: 80vh;
   }
 
+  .flex {
+    display: flex;
+    margin-left: 4rem;
+  }
   .section__pic-container {
     display: flex;
     height: 400px;
@@ -117,6 +124,15 @@ import "../style.css";
     left: -15px;
     top: calc(50% - 15px);
   }
+  /* TYPING EFFECT */
+  .blink {
+    animation: blink 0.5s infinite;
+  }
+  @keyframes blink {
+    to {
+      opacity: 0;
+    }
+  }
 
   @media screen and (max-width: 600px) {
     #profile {
@@ -182,3 +198,45 @@ import "../style.css";
     }
   }
 </style>
+
+<script>
+  const words = ["a Frontend Developer.", "a Digital Designer.", "a  Problem Solver"];
+  let i = 0;
+  let timer;
+
+  function typingEffect() {
+    let word = words[i].split("");
+    var loopTyping = function () {
+      if (word.length > 0) {
+        document.getElementById("word").innerHTML += word.shift();
+      } else {
+        deletingEffect();
+        return false;
+      }
+      timer = setTimeout(loopTyping, 500);
+    };
+    loopTyping();
+  }
+
+  function deletingEffect() {
+    let word = words[i].split("");
+    var loopDeleting = function () {
+      if (word.length > 0) {
+        word.pop();
+        document.getElementById("word").innerHTML = word.join("");
+      } else {
+        if (words.length > i + 1) {
+          i++;
+        } else {
+          i = 0;
+        }
+        typingEffect();
+        return false;
+      }
+      timer = setTimeout(loopDeleting, 200);
+    };
+    loopDeleting();
+  }
+
+  typingEffect();
+</script>
