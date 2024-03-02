@@ -2,66 +2,121 @@
 
 ---
 
-<section>
-  <img src="../img/kh.png" alt="Cartoon billede af Kezia" />
-  <div>
-    <h1>I am a Frontend developer</h1>
-    <p>Creative design and coding in harmony</p>
+<section id="profile">
+  <div class="section__pic-container">
+    <img src="../img/kh.png" alt="Cartoon picture of Kezia" />
+  </div>
+  <div class="section__text">
+    <p class="section__text__p1">Hello, i'm</p>
+    <h1 class="title">Kezia Hansen</h1>
+    <p class="section__text__p2">Frontend Developer</p>
+    <p class="section__text__p3">- Creative design and coding in harmony</p>
+    <div class="bubble-container">
+      <div class="speech left">
+        Hey, Let’s Talk!
+        <br />
+        <br />
+        If you'd like to connect on <a href="https://www.linkedin.com/in/keziahansen/">LinkedIn</a> or hit me up by <a href="mailto: kezia.hansen02@gmail.com">email</a>.
+      </div>
+    </div>
   </div>
 </section>
 
 <style>
-  section {
+  /* "PROFILE SECTION" */
+
+  #profile {
     display: flex;
-    align-items: center;
-    white-space: nowrap;
-    padding-top: 80px;
-  }
-  section img {
-    width: 172px;
-    height: auto;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
   }
 
-  div {
-    padding-right: 30px;
-    margin-left: 30px;
+  .section__pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 4rem;
+  }
+
+  .section__text {
+    align-self: flex-start;
     text-align: center;
+    margin-top: 3rem;
   }
 
-  div h1 {
-    color: #9c2e0e;
-    font-size: 40px;
-  }
-
-  div p {
+  .section__text__p1 {
+    text-align: center;
     color: #6e2200;
-    font-size: 20px;
+    font-size: 1.5rem;
   }
 
-  /* Wide Screen */
+  .title {
+    font-size: 5rem;
+    text-align: center;
+    color: #9c2e0e;
+  }
 
-  @media (min-width: 48em) {
-    section {
-      flex-direction: column;
-    }
-    section img {
-      width: 333px;
-      height: auto;
-    }
+  .section__text__p2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #cc5819;
+  }
 
-    div {
-      padding-right: 30px;
-      margin-left: 30px;
-    }
+  .section__text__p3 {
+    color: #6e2200;
+    font-size: 1.5rem;
+  }
+  /* SPEECH BUBBLE STYLING */
 
-    div h1 {
-      color: #9c2e0e;
-      font-size: 88px;
-    }
+  /* (A) SPEECH BOX */
+  .speech {
+    /* (A1) FONT & COLORS */
+    font-size: 1.2em;
+    color: #fee1bb;
+    background: #9c2e0e;
 
-    div p {
-      color: #6e2200;
-      font-size: 40px;
-    }
+    /* (A2) DIMENSIONS */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+  }
+
+  .speech a {
+    color: #fda45f;
+    text-decoration: none;
+  }
+
+  .speech a:hover {
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+  }
+
+  /* (B) USE ::AFTER TO CREATE THE "CALLOUT" */
+  .speech::after {
+    display: block;
+    width: 0;
+    content: "";
+    border: 15px solid transparent;
+  }
+
+  .speech.left::after {
+    border-right-color: #9c2e0e;
+    border-left: 0;
+  }
+
+  /* (D) POSITION THE CALLOUT */
+  .speech {
+    position: relative;
+    margin: 30px;
+  }
+  .speech::after {
+    position: absolute;
+  }
+
+  .speech.left::after {
+    left: -15px;
+    top: calc(50% - 15px);
   }
 </style>
