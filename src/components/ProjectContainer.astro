@@ -2,17 +2,37 @@
 import ProjectBox from "../components/ProjectBox.astro";
 ---
 
+<h1>Projects</h1>
 <section>
   <ProjectBox />
-
   <ProjectBox />
-
   <ProjectBox />
-
   <ProjectBox />
 </section>
 
 <style>
   section {
+    display: grid;
+    grid-template-columns: 1fr; /* This will make the boxes stack vertically */
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%; /* Set the width to 100% */
+    margin: 0 auto; /* Center the section element horizontally */
+    margin-left: 188px;
+  }
+
+  @media (min-width: 48em) {
+    /* This is a common breakpoint for desktop devices */
+    section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      width: 100%; /* Set the width to 100% */
+      margin: 0 auto; /* Center the section element horizontally */
+      margin-left: 188px;
+    }
   }
 </style>
