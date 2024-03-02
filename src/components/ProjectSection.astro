@@ -1,5 +1,5 @@
 ---
-import "../style.css";
+
 ---
 
 <section id="projects">
@@ -13,8 +13,8 @@ import "../style.css";
         </div>
         <h2 class="project-sub-title project-title">Project One</h2>
         <div class="btn-container">
-          <a class="btn btn-color-2 project-btn" href="https://github.com/livzino/light_festival_liv.git">Github</a>
-          <a class="btn btn-color-2 project-btn" href="https://copenhagenlightfestival-gruppe4.netlify.app/">Live Demo</a>
+          <a class="btn btn-color project-btn" href="https://github.com/livzino/light_festival_liv.git">Github</a>
+          <a class="btn btn-color project-btn" href="https://copenhagenlightfestival-gruppe4.netlify.app/">Live Demo</a>
         </div>
       </div>
       <div class="details-container color-container">
@@ -23,8 +23,8 @@ import "../style.css";
         </div>
         <h2 class="project-sub-title project-title">Project Two</h2>
         <div class="btn-container">
-          <a class="btn btn-color-2 project-btn" href="https://github.com/misszarakarim/CA.git">Github</a>
-          <a class="btn btn-color-2 project-btn" href="https://ca-karrierekick.netlify.app/">Live Demo</a>
+          <a class="btn btn-color project-btn" href="https://github.com/misszarakarim/CA.git">Github</a>
+          <a class="btn btn-color project-btn" href="https://ca-karrierekick.netlify.app/">Live Demo</a>
         </div>
       </div>
       <div class="details-container color-container">
@@ -33,8 +33,8 @@ import "../style.css";
         </div>
         <h2 class="project-sub-title project-title">Project Three</h2>
         <div class="btn-container">
-          <a class="btn btn-color-2 project-btn" href="https://github.com/misszarakarim/kpop.git">Github</a>
-          <a class="btn btn-color-2 project-btn" href="https://the-korner.netlify.app/">Live Demo</a>
+          <a class="btn btn-color project-btn" href="https://github.com/misszarakarim/kpop.git">Github</a>
+          <a class="btn btn-color project-btn" href="https://the-korner.netlify.app/">Live Demo</a>
         </div>
       </div>
     </div>
@@ -42,68 +42,25 @@ import "../style.css";
 </section>
 
 <style>
-  .color-container {
-    border-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
+  .section__text {
+    align-self: center;
+    text-align: center;
   }
+
   .section__text__p1 {
     text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
     color: #6e2200;
-    font-size: 2rem;
   }
 
   .title {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     color: #9c2e0e;
   }
 
-  .about-containers {
-    gap: 2rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-  }
-
-  .project-details-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .details-container {
-    padding: 1.5rem;
-    background: #fee1bb;
-    border-radius: 2rem;
-    border: #cc5819 0.3rem solid;
-    text-align: center;
-  }
-
-  .project-sub-title {
-    color: #cc5819;
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
-  }
-
-  .project-img {
-    border-radius: 2rem;
-    width: 90%;
-    height: 90%;
-  }
-  .project-title {
-    margin: 1rem;
-    color: black;
-  }
-
-  .article-container {
-    display: flex;
-    text-align: initial;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 2.5rem;
-    justify-content: space-around;
-  }
   /* BUTTONS */
-
   .btn-container {
     display: flex;
     justify-content: center;
@@ -118,84 +75,131 @@ import "../style.css";
     border-radius: 2rem;
   }
 
-  .btn-color-1,
-  .btn-color-2 {
-    border: rgb(53, 53, 53) 0.1rem solid;
+  .btn-color {
+    border: #cc5819 0.1rem solid;
+    color: #cc5819;
+    text-decoration: none;
   }
 
-  .btn-color-1:hover,
-  .btn-color-2:hover {
+  .btn-color:hover {
     cursor: pointer;
   }
 
-  .btn-color-1,
-  .btn-color-2:hover {
-    background: rgb(53, 53, 53);
-    color: white;
+  .btn-color:hover {
+    background: #9c2e0e;
+    border: #9c2e0e 0.1rem solid;
+    color: #fee1bb;
   }
 
-  .btn-color-1:hover {
-    background: rgb(0, 0, 0);
-  }
-
-  .btn-color-2 {
+  .btn-color {
     background: none;
-  }
-
-  .btn-color-2:hover {
-    border: rgb(255, 255, 255) 0.1rem solid;
   }
 
   .btn-container {
     gap: 1rem;
   }
-  .project-btn {
-    color: black;
-    border-color: rgb(163, 163, 163);
+
+  .about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .about-containers {
+    display: flex;
+  }
+
+  .details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: #fee1bb;
+    border-radius: 2rem;
+    border: #cc5819 0.1rem solid;
+    border-color: #cc5819;
+    text-align: center;
+  }
+
+  #project {
+    position: relative;
+  }
+
+  .project-sub-title {
+    color: #cc5819;
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .article-container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+  }
+
+  #projects {
+    position: relative;
+  }
+
+  .color-container {
+    border-color: #cc5819;
+    background: #fee1bb;
+  }
+
+  .project-img {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+  }
+
+  .project-title {
+    margin: 1rem;
+    color: #cc5819;
   }
 
   @media screen and (max-width: 1400px) {
     .about-containers {
       flex-wrap: wrap;
     }
+
     #projects {
       height: fit-content;
     }
   }
 
   @media screen and (max-width: 1200px) {
-    #projects,
+    #project,
     .project-details-container {
       margin-top: 2rem;
     }
-    #projects,
-    .section-container {
-      display: block;
-    }
 
-    section,
-    .section-container {
+    section {
       height: fit-content;
     }
     section {
       margin: 0 5%;
     }
-    .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
-    }
+
     .about-containers {
       margin-top: 0;
-      flex-wrap: wrap;
+    }
+    .btn-color:hover {
+      background: #fee1bb;
+      border: #cc5819 0.1rem solid;
+      color: #cc5819;
     }
   }
 
   @media screen and (max-width: 600px) {
-    article {
-      font-size: 1rem;
-    }
-
     .about-containers,
     .btn-container {
       flex-wrap: wrap;
@@ -205,19 +209,14 @@ import "../style.css";
       font-size: 1.25rem;
     }
 
-    .section__pic-container {
-      width: auto;
-      height: 46vw;
-      justify-content: center;
-    }
-    .section__text__p2 {
-      font-size: 1.25rem;
-    }
     .title {
       font-size: 2rem;
     }
-    .text-container {
-      text-align: justify;
+
+    .btn-color:hover {
+      background: #fee1bb;
+      border: #cc5819 0.1rem solid;
+      color: #cc5819;
     }
   }
 </style>
