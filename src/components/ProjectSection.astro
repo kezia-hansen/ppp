@@ -11,7 +11,10 @@
         <div class="article-container">
           <img src="../img/project1.png" alt="Project 1" class="project-img" />
         </div>
-        <h2 class="project-sub-title project-title">Project One</h2>
+        <div>
+          <h2 class="project-sub-title project-title">Project One</h2>
+          <p class="project-sub-p project-p">role:</p>
+        </div>
         <div class="btn-container">
           <a class="btn btn-color project-btn" href="https://github.com/livzino/light_festival_liv.git">Github</a>
           <a class="btn btn-color project-btn" href="https://copenhagenlightfestival-gruppe4.netlify.app/">Live Demo</a>
@@ -21,7 +24,10 @@
         <div class="article-container">
           <img src="../img/project2.png" alt="Project 2" class="project-img" />
         </div>
-        <h2 class="project-sub-title project-title">Project Two</h2>
+        <div>
+          <h2 class="project-sub-title project-title">Project Two</h2>
+          <p class="project-sub-p project-p">role:</p>
+        </div>
         <div class="btn-container">
           <a class="btn btn-color project-btn" href="https://github.com/misszarakarim/CA.git">Github</a>
           <a class="btn btn-color project-btn" href="https://ca-karrierekick.netlify.app/">Live Demo</a>
@@ -31,7 +37,10 @@
         <div class="article-container">
           <img src="../img/project3.png" alt="Project 3" class="project-img" />
         </div>
-        <h2 class="project-sub-title project-title">Project Three</h2>
+        <div>
+          <h2 class="project-sub-title project-title">Project Three</h2>
+          <p class="project-sub-p project-p">role:</p>
+        </div>
         <div class="btn-container">
           <a class="btn btn-color project-btn" href="https://github.com/misszarakarim/kpop.git">Github</a>
           <a class="btn btn-color project-btn" href="https://the-korner.netlify.app/">Live Demo</a>
@@ -76,8 +85,8 @@
   }
 
   .btn-color {
-    border: #cc5819 0.1rem solid;
-    color: #cc5819;
+    border: #fda45f 0.1rem solid;
+    color: #fda45f;
     text-decoration: none;
   }
 
@@ -86,9 +95,9 @@
   }
 
   .btn-color:hover {
-    background: #9c2e0e;
-    border: #9c2e0e 0.1rem solid;
-    color: #fee1bb;
+    background: #fda45f;
+    border: #fda45f 0.1rem solid;
+    color: #cc5819;
   }
 
   .btn-color {
@@ -112,7 +121,7 @@
   .details-container {
     padding: 1.5rem;
     flex: 1;
-    background: #fee1bb;
+    background: #cc5819;
     border-radius: 2rem;
     border: #cc5819 0.1rem solid;
     border-color: #cc5819;
@@ -125,9 +134,15 @@
 
   .project-sub-title {
     color: #cc5819;
-    font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
+  }
+
+  .project-sub-p {
+    color: #cc5819;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
   }
 
   .project-details-container {
@@ -152,7 +167,7 @@
 
   .color-container {
     border-color: #cc5819;
-    background: #fee1bb;
+    background: #cc5819;
   }
 
   .project-img {
@@ -163,7 +178,12 @@
 
   .project-title {
     margin: 1rem;
-    color: #cc5819;
+    color: #9c2e0e;
+  }
+
+  .project-p {
+    margin: 1rem;
+    color: #6e2200;
   }
 
   @media screen and (max-width: 1400px) {
@@ -193,9 +213,9 @@
       margin-top: 0;
     }
     .btn-color:hover {
-      background: #fee1bb;
-      border: #cc5819 0.1rem solid;
-      color: #cc5819;
+      background: #cc5819;
+      border: #fda45f 0.1rem solid;
+      color: #fda45f;
     }
   }
 
@@ -214,9 +234,9 @@
     }
 
     .btn-color:hover {
-      background: #fee1bb;
-      border: #cc5819 0.1rem solid;
-      color: #cc5819;
+      background: #cc5819;
+      border: #fda45f 0.1rem solid;
+      color: #fda45f;
     }
   }
 </style>
