@@ -7,17 +7,25 @@
 
 }
 
+/* GENERAL STYLING */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-html {
+body {
     font-family: 'cherry_bomb_oneregular';
     background: #FEE1BB;
 }
 
-body {
-    margin: 0 auto;
+
+p {
+    color: #9C2E0E;
+}
+
+
+/* TRANSITION */
+
+.btn {
+    transition: all 300ms ease;
 }
