@@ -26,7 +26,7 @@ p {
 
 /* TRANSITION */
 
-.btn {
+a.btn {
     transition: all 300ms ease;
 }
 
